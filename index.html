@@ -940,6 +940,42 @@
       flex-wrap: wrap;
     }
 
+    .footer-metrics {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-top: 14px;
+      margin-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .view-counter {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 6px 10px;
+      color: var(--ink-soft);
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .view-counter i {
+      color: var(--blue);
+      font-size: 0.86rem;
+    }
+
+    .counter-value {
+      color: var(--blue-deep);
+      font-variant-numeric: tabular-nums;
+    }
+
     .back-to-top {
       position: fixed;
       right: 18px;
@@ -1653,6 +1689,18 @@
     <div class="container footer-row">
       <span>&copy; 2026 Dr. Shikun Hou. All rights reserved.</span>
       <span>Designed as a structured academic research interface.</span>
+      <div class="footer-metrics" aria-label="Visitor statistics">
+        <span class="view-counter" id="busuanzi_container_page_pv">
+          <i class="fa-solid fa-eye" aria-hidden="true"></i>
+          Page views
+          <strong class="counter-value" id="busuanzi_value_page_pv">--</strong>
+        </span>
+        <span class="view-counter" id="busuanzi_container_site_pv">
+          <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+          Site views
+          <strong class="counter-value" id="busuanzi_value_site_pv">--</strong>
+        </span>
+      </div>
     </div>
   </footer>
 
@@ -1660,6 +1708,7 @@
     <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
   </button>
 
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <script>
     (() => {
       const navToggle = document.querySelector(".nav-toggle");
