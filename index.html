@@ -123,8 +123,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 64px;
-      gap: 20px;
+      min-height: 76px;
+      gap: 24px;
     }
 
     .brand {
@@ -133,19 +133,20 @@
       gap: 12px;
       color: var(--ink);
       font-weight: 700;
+      font-size: 1.08rem;
       white-space: nowrap;
     }
 
     .brand-mark {
-      width: 38px;
-      height: 38px;
+      width: 46px;
+      height: 46px;
       display: grid;
       place-items: center;
       color: #ffffff;
       background: linear-gradient(135deg, var(--ink), var(--blue));
       border-radius: var(--radius);
       box-shadow: 0 10px 22px rgba(8, 59, 134, 0.2);
-      font-size: 0.82rem;
+      font-size: 0.92rem;
       letter-spacing: 0.02em;
     }
 
@@ -159,11 +160,11 @@
     .nav-links a {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      min-height: 38px;
-      padding: 8px 10px;
+      gap: 9px;
+      min-height: 46px;
+      padding: 10px 13px;
       color: var(--ink-soft);
-      font-size: 0.86rem;
+      font-size: 0.96rem;
       font-weight: 600;
       border-radius: var(--radius-sm);
       transition: color var(--speed) ease, background var(--speed) ease;
@@ -177,13 +178,13 @@
 
     .nav-links i {
       color: var(--blue);
-      font-size: 0.82rem;
+      font-size: 0.94rem;
     }
 
     .nav-toggle {
       display: none;
-      width: 40px;
-      height: 40px;
+      width: 46px;
+      height: 46px;
       align-items: center;
       justify-content: center;
       color: var(--ink);
@@ -1020,7 +1021,7 @@
 
       .nav-links {
         position: absolute;
-        top: 64px;
+        top: 76px;
         right: 18px;
         left: 18px;
         display: none;
@@ -1670,6 +1671,7 @@
       const searchInput = document.querySelector("#publication-search");
       const publicationItems = document.querySelectorAll("#publication-list .publication");
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let activePublicationFilter = "all";
 
       function closeNavigation() {
         if (!navToggle || !navLinks) return;
@@ -1693,31 +1695,48 @@
       }
 
       function updatePublications() {
-        const activeFilter = document.querySelector(".filter-btn.is-active")?.dataset.filter || "all";
-        const query = (searchInput?.value || "").trim().toLowerCase();
+        const query = (searchInput ? searchInput.value : "").trim().toLowerCase();
 
         publicationItems.forEach((item) => {
-          const groupMatch = activeFilter === "all" || item.dataset.group === activeFilter;
-          const text = `${item.textContent} ${item.dataset.search || ""}`.toLowerCase();
+          const groupMatch = activePublicationFilter === "all" || item.dataset.group === activePublicationFilter;
+          const text = (item.textContent + " " + (item.dataset.search || "")).toLowerCase();
           const searchMatch = !query || text.includes(query);
-          item.hidden = !(groupMatch && searchMatch);
+          const isVisible = groupMatch && searchMatch;
+          item.hidden = !isVisible;
+          item.style.display = isVisible ? "" : "none";
         });
       }
 
+      function setPublicationFilter(nextFilter) {
+        activePublicationFilter = nextFilter || "all";
+        filterButtons.forEach((item) => {
+          const isActive = item.dataset.filter === activePublicationFilter;
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
+        });
+        updatePublications();
+      }
+
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest(".filter-btn");
+        if (!button) return;
+        event.preventDefault();
+        setPublicationFilter(button.dataset.filter);
+      });
+
       filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          filterButtons.forEach((item) => {
-            const isActive = item === button;
-            item.classList.toggle("is-active", isActive);
-            item.setAttribute("aria-pressed", String(isActive));
-          });
-          updatePublications();
+        button.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          setPublicationFilter(button.dataset.filter);
         });
       });
 
       if (searchInput) {
         searchInput.addEventListener("input", updatePublications);
       }
+
+      setPublicationFilter("all");
 
       if (backToTop) {
         backToTop.addEventListener("click", () => {
