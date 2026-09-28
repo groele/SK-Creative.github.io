@@ -754,6 +754,27 @@
       gap: 12px;
     }
 
+    .project-group-title {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0 0;
+      padding: 12px 14px;
+      color: var(--blue-deep);
+      background: rgba(11, 97, 216, 0.06);
+      border: 1px solid rgba(11, 97, 216, 0.14);
+      border-radius: var(--radius);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .project-group-title i {
+      color: var(--blue);
+    }
+
     .project {
       display: grid;
       grid-template-columns: 48px 1fr auto;
@@ -1551,6 +1572,59 @@
             </div>
           </div>
           <a class="icon-link" href="https://github.com/groele/Optical-path-diagram" target="_blank" rel="noopener noreferrer" aria-label="Open Optical Path Diagram repository">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <div class="project-group-title" role="heading" aria-level="3">
+          <i class="fa-solid fa-book-bookmark" aria-hidden="true"></i>
+          Zotero Plugins
+        </div>
+
+        <article class="project">
+          <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-list-check"></i></div>
+          <div>
+            <h3>Todolist for Zotero</h3>
+            <p>Research-focused task and schedule management integrated with Zotero items, PDF reading, page anchors, study milestones, Kanban views, calendars, and progress tracking.</p>
+            <div class="tool-tags">
+              <span>Zotero plugin</span>
+              <span>Task management</span>
+              <span>PDF workflow</span>
+            </div>
+          </div>
+          <a class="icon-link" href="https://github.com/groele/Todolist-Zotero" target="_blank" rel="noopener noreferrer" aria-label="Open Todolist for Zotero repository">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="project">
+          <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-diagram-project"></i></div>
+          <div>
+            <h3>MindFlow for Zotero</h3>
+            <p>Editable mind-mapping workspace inside Zotero for organizing papers, annotations, notes, research ideas, tasks, relationships, and exportable visual knowledge structures.</p>
+            <div class="tool-tags">
+              <span>Zotero plugin</span>
+              <span>Mind mapping</span>
+              <span>Knowledge workflow</span>
+            </div>
+          </div>
+          <a class="icon-link" href="https://github.com/groele/Mindflow-zotero" target="_blank" rel="noopener noreferrer" aria-label="Open MindFlow for Zotero repository">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="project">
+          <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-file-circle-check"></i></div>
+          <div>
+            <h3>ResearchFlow for Zotero</h3>
+            <p>Manuscript and publication workflow manager connecting research planning, submissions, peer-review rounds, reviewer responses, timelines, and Zotero library items.</p>
+            <div class="tool-tags">
+              <span>Zotero plugin</span>
+              <span>Manuscript workflow</span>
+              <span>Peer review</span>
+            </div>
+          </div>
+          <a class="icon-link" href="https://github.com/groele/ResearchFlow-Zotero" target="_blank" rel="noopener noreferrer" aria-label="Open ResearchFlow for Zotero repository">
             <i class="fa-brands fa-github" aria-hidden="true"></i>
           </a>
         </article>
