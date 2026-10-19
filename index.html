@@ -1299,6 +1299,41 @@
     .zotero-flow-card .icon-link{border-radius:8px;background:#f6f9fe}
     @media(max-width:700px){.zotero-flow-intro{padding:25px 19px}.flow-brand-emblem{position:static;float:right;margin-bottom:8px}.zotero-flow-intro h3{clear:both}.zotero-matrix{padding:18px 13px}.zotero-matrix-heading{gap:12px}.zotero-flow-card{padding:17px}.zotero-matrix-table th:first-child{min-width:160px}}
     @media(prefers-reduced-motion:reduce){.zotero-flow-card{transition:none}.zotero-flow-card:hover{transform:none}}
+
+/* Refined professional styling for Zotero Flow Series */
+#projects .zotero-flow-intro{background:#10243b;color:#eef6ff;border:1px solid #203c57;border-radius:14px;padding:0;box-shadow:0 18px 46px rgba(8,30,52,.12)}
+#projects .zotero-flow-intro::before{display:none}
+.flow-brand-topline{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 30px;border-bottom:1px solid rgba(224,242,255,.13)}
+.flow-brand-logotype{display:inline-flex;align-items:center;gap:9px;font-size:1rem;font-weight:800;letter-spacing:.12em;color:#f6fbff}
+.flow-brand-logotype i{font-size:1.1rem;color:#5de0d0}
+.flow-brand-logotype span{color:#67ddd0;margin-left:-7px}
+.flow-brand-edition{color:#adc0cf;font-size:.65rem;font-weight:700;letter-spacing:.12em}
+.flow-brand-body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(225px,.68fr);align-items:end;gap:26px;padding:41px 30px 35px}
+#projects .zotero-flow-intro .flow-overline{color:#70e2d3;letter-spacing:.15em}
+#projects .zotero-flow-intro .flow-overline::before{background:#70e2d3}
+#projects .zotero-flow-intro h3{color:#fff;max-width:830px;font-family:"IBM Plex Sans","Segoe UI",sans-serif;letter-spacing:-.045em;font-size:clamp(2rem,4vw,3.6rem);line-height:1.12;font-weight:700;margin:19px 0}
+#projects .zotero-flow-intro h3 em{color:#8cddda;font-style:normal}
+#projects .zotero-flow-intro p{max-width:670px;color:#c5d4e0;line-height:1.75;font-size:.92rem}
+.flow-brand-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;padding:10px 0 5px;border-top:1px solid rgba(235,246,255,.23)}
+.flow-brand-stats div{display:grid;gap:5px}.flow-brand-stats strong{color:#fff;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:650;letter-spacing:-.04em}.flow-brand-stats span{color:#adbfce;font-size:.68rem;line-height:1.45}
+#projects .zotero-flow-intro .flow-journey{margin:0;padding:17px 29px;border-top:1px solid rgba(224,242,255,.13);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#projects .zotero-flow-intro .flow-journey span{color:#e1eff9;border:1px solid rgba(170,210,234,.22);background:rgba(255,255,255,.055);box-shadow:none;padding:7px 9px}
+#projects .zotero-flow-intro .flow-journey b{color:#71e3d3;background:transparent;width:auto;height:auto}
+#projects .zotero-flow-intro .flow-journey i{color:#648aa7;font-size:.65rem}
+#projects .zotero-matrix{background:#fff;border:1px solid #dce5ed;box-shadow:none;border-radius:12px;padding:28px}
+#projects .zotero-matrix-heading h3{font-weight:700;letter-spacing:-.035em}
+#projects .zotero-matrix-table thead th{background:#f4f7fa;color:#465c73}
+#projects .zotero-matrix-table .matrix-core{background:#dcf4f0;color:#087c76;border-radius:7px}
+#projects .zotero-matrix-table .matrix-support{background:#f0f3f7;color:#7994aa;border-radius:7px}
+#projects .zotero-flow-card{box-shadow:none;border:1px solid #dce5ef;border-radius:11px}
+#projects .zotero-flow-card::before{background:#1e8e95;height:2px;opacity:.6}
+#projects .zotero-flow-card:hover{border-color:#9dc9cf;box-shadow:0 10px 30px rgba(14,58,79,.07)}
+#projects .zotero-flow-card .project-icon{background:#f2f7f8;border-color:#dce9eb;color:#137f89}
+#projects .zotero-flow-card .flow-product-icon{padding:5px}
+#projects .zotero-flow-card .flow-product-icon img{width:100%;height:100%;object-fit:contain}
+#projects .zotero-flow-card .flow-card-step{color:#087c76}
+@media(max-width:850px){.flow-brand-body{grid-template-columns:1fr}.flow-brand-stats{max-width:500px}.flow-brand-edition{display:none}}
+@media(max-width:560px){.flow-brand-topline{padding:17px 20px}.flow-brand-body{padding:28px 20px}.flow-brand-stats{gap:8px}#projects .zotero-flow-intro .flow-journey{padding:16px 20px;gap:6px}}
   </style>
 </head>
 <body>
@@ -1678,16 +1713,15 @@
           Zotero Flow Series · An integrated research workflow
         </div>
         <div class="zotero-flow-intro">
-          <div class="flow-brand-emblem" aria-hidden="true"><i class="fa-solid fa-atom"></i><span>FLOW</span></div>
-          <div class="flow-overline">ZOTERO FLOW SERIES  /  RESEARCH TOOLKIT</div>
-          <h3>One research journey. Seven focused tools.</h3>
-          <p>The Zotero Flow Series brings literature discovery, metadata quality, citation previews, visual knowledge organization, research planning, writing and publication management into a coherent, modular academic workflow. Use each plugin independently or combine them as your research progresses.</p>
-          <div class="flow-journey" aria-label="Suggested Zotero Flow Series usage order">
-            <span><b>01</b> Discover</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>02</b> Curate</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>03</b> Read</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>04</b> Connect</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>05</b> Plan</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>06</b> Write</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>07</b> Publish</span>
+          <div class="flow-brand-topline"><span class="flow-brand-logotype"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> ZOTERO<span>FLOW</span></span><span class="flow-brand-edition">RESEARCH WORKFLOW COLLECTION / 2026</span></div>
+          <div class="flow-brand-body">
+            <div><span class="flow-overline">A MODULAR RESEARCH TOOLKIT</span><h3>Everything in its place.<br /><em>Research in motion.</em></h3><p>Seven focused Zotero extensions spanning discovery, library quality, reading, knowledge mapping, planning, citation tracking and publication management. Useful individually, coherent together.</p></div>
+            <div class="flow-brand-stats"><div><strong>07</strong><span>Focused plugins</span></div><div><strong>07</strong><span>Research stages</span></div><div><strong>01</strong><span>Unified vision</span></div></div>
           </div>
+          <div class="flow-journey" aria-label="Suggested research workflow order"><span><b>01</b> Discover</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span><b>02</b> Curate</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span><b>03</b> Read</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span><b>04</b> Connect</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span><b>05</b> Plan</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span><b>06</b> Write</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span><b>07</b> Publish</span></div>
         </div>
 
-        <div class="zotero-matrix" id="zotero-flow-matrix" aria-labelledby="zotero-matrix-title">
+                <div class="zotero-matrix" id="zotero-flow-matrix" aria-labelledby="zotero-matrix-title">
           <div class="zotero-matrix-heading">
             <div><span class="flow-overline">02 / PRODUCT CAPABILITY MAP</span>
               <h3 id="zotero-matrix-title">Explore the capability matrix</h3>
@@ -1714,7 +1748,7 @@
         </div>
 
         <article class="project zotero-flow-card">
-          <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-diagram-project"></i></div>
+          <div class="project-icon flow-product-icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/groele/Zotero-RefFlow/main/icon.png" alt="" loading="lazy" decoding="async" /></div>
           <div>
             <div class="flow-card-step"><span>01 / Discover</span><span>FLOW SERIES</span></div>
             <h3>Zotero-RefFlow</h3>
@@ -1736,7 +1770,7 @@
         </article>
 
         <article class="project zotero-flow-card">
-          <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-eye"></i></div>
+          <div class="project-icon flow-product-icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/groele/Zotero-ViewFlow/main/view.svg" alt="" loading="lazy" decoding="async" /></div>
           <div>
             <div class="flow-card-step"><span>03 / Read</span><span>FLOW SERIES</span></div>
             <h3>Zotero-ViewFlow</h3>
@@ -1758,7 +1792,7 @@
         </article>
 
         <article class="project zotero-flow-card">
-          <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-list-check"></i></div>
+          <div class="project-icon flow-product-icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/groele/Zotero-TaskFlow/main/icon.png" alt="" loading="lazy" decoding="async" /></div>
           <div>
             <div class="flow-card-step"><span>05 / Plan</span><span>FLOW SERIES</span></div>
             <h3>Zotero-TaskFlow</h3>
@@ -1769,7 +1803,7 @@
         </article>
 
         <article class="project zotero-flow-card">
-          <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-quote-right"></i></div>
+          <div class="project-icon flow-product-icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/groele/Zotero-CiteFlow/main/icon.png" alt="" loading="lazy" decoding="async" /></div>
           <div>
             <div class="flow-card-step"><span>06 / Write</span><span>FLOW SERIES</span></div>
             <h3>Zotero-CiteFlow</h3>
