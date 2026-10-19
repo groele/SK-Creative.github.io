@@ -1253,6 +1253,52 @@
     .matrix-legend span {display: inline-flex; gap: 6px; align-items: center;}
     .matrix-legend b {font-size: 1.1rem;}
     @media(max-width:700px){.zotero-matrix{padding:15px}.zotero-matrix-heading{align-items:flex-start;flex-direction:column;}.zotero-matrix-explore{white-space:normal;}}
+
+    /* Zotero Flow Series — editorial product-system refresh */
+    .zotero-flow-intro{position:relative;isolation:isolate;overflow:hidden;padding:36px 38px 30px;border:1px solid #bad0ee;border-radius:12px;background:linear-gradient(117deg,#f3f8ff 5%,#fff 62%,#eef8ff 100%);box-shadow:0 13px 35px rgba(11,61,132,.055)}
+    .zotero-flow-intro::before{content:"";position:absolute;z-index:-1;right:-125px;top:-180px;width:440px;height:440px;border:1px solid rgba(11,97,216,.12);border-radius:50%;box-shadow:0 0 0 48px rgba(11,97,216,.025),0 0 0 100px rgba(11,97,216,.019)}
+    .zotero-flow-intro .flow-overline{display:inline-flex;align-items:center;gap:10px;color:#2054a0;letter-spacing:.12em}
+    .zotero-flow-intro .flow-overline::before{content:"";width:26px;height:2px;background:#00a8c8}
+    .zotero-flow-intro h3{position:relative;max-width:700px;font-size:clamp(1.7rem,3.1vw,2.7rem);line-height:1.13;margin:17px 0 14px;letter-spacing:-.025em}
+    .zotero-flow-intro p{max-width:740px;font-size:.95rem;line-height:1.7}
+    .flow-brand-emblem{position:absolute;top:28px;right:32px;display:flex;align-items:center;gap:8px;color:#0b61d8;opacity:.8;font-size:13px;font-weight:800;letter-spacing:.15em}
+    .flow-brand-emblem i{font-size:23px;color:#008fac}
+    .flow-journey{margin-top:27px;padding-top:23px;border-top:1px solid #d3e1f1;gap:7px}
+    .flow-journey span{padding:9px 11px;border-radius:7px;box-shadow:0 2px 8px rgba(22,58,101,.035);font-size:.78rem;border-color:#d8e4f3}
+    .flow-journey b{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:5px;background:#eaf2ff;font-size:.68rem}
+    .flow-journey i{color:#97b5d8}
+    .zotero-matrix{padding:29px 30px 23px;border:1px solid #d0deef;border-radius:12px;box-shadow:0 12px 34px rgba(22,48,85,.045)}
+    .zotero-matrix-heading{align-items:center;margin-bottom:21px}
+    .zotero-matrix-heading h3{font-family:"IBM Plex Sans","Segoe UI",sans-serif;letter-spacing:-.025em;font-weight:700;font-size:clamp(1.35rem,2.2vw,1.85rem)}
+    .zotero-matrix-heading p{line-height:1.65}
+    .zotero-matrix-explore{display:inline-flex;align-items:center;gap:10px;padding:9px 13px;border:1px solid #ccdbee;border-radius:7px;background:#f7faff;color:#164987}
+    .zotero-matrix-explore:hover{background:#eaf3ff}
+    .zotero-matrix-scroll{border-radius:9px;border:1px solid #d9e5f1}
+    .zotero-matrix-table{min-width:850px}
+    .zotero-matrix-table thead th{height:53px;background:#eff5fd;font-size:.76rem;color:#28527f;border-bottom:1px solid #cbddef}
+    .zotero-matrix-table th:first-child{position:sticky;left:0;z-index:2;min-width:192px;box-shadow:2px 0 0 rgba(194,213,234,.32)}
+    .zotero-matrix-table thead th:first-child{z-index:3;background:#e9f2fd}
+    .zotero-matrix-table tbody th{background:#fff}
+    .zotero-matrix-table tbody tr:nth-child(even) th{background:#fbfdff}
+    .zotero-matrix-table tbody tr:nth-child(even) td{background:#fbfdff}
+    .zotero-matrix-table tbody tr:hover th,.zotero-matrix-table tbody tr:hover td{background:#edf6ff}
+    .zotero-matrix-table tbody th a{font-weight:750;color:#153b71}
+    .zotero-matrix-table tbody th a:hover{text-decoration:underline}
+    .zotero-matrix-table td{color:#acb8c8}
+    .zotero-matrix-table .matrix-core{display:inline-grid;place-items:center;width:33px;height:33px;border-radius:9px;background:#e6f0ff;color:#1162c7;font-size:1.22rem}
+    .zotero-matrix-table .matrix-support{display:inline-grid;place-items:center;width:31px;height:31px;border-radius:9px;background:#f1f5fa;color:#6889ae;font-size:1.12rem}
+    .matrix-legend{padding-top:12px;border-top:1px solid #edf1f7;margin-top:17px;gap:10px 24px}
+    .zotero-flow-card{position:relative;overflow:hidden;align-items:start;border:1px solid #dae4f0;border-top:1px solid #dae4f0;border-radius:10px;padding:22px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+    .zotero-flow-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0b61d8,#00a8c8);opacity:.75}
+    .zotero-flow-card:hover{transform:translateY(-3px);border-color:#adc9eb;box-shadow:0 12px 30px rgba(11,61,132,.095)}
+    .zotero-flow-card .project-icon{width:48px;height:48px;color:#0757b6;background:#eaf3ff;border:1px solid #d5e6fa;border-radius:10px;font-size:1.1rem}
+    .zotero-flow-card h3{font-size:1.04rem;letter-spacing:-.01em}
+    .zotero-flow-card p{line-height:1.65;margin-top:9px}
+    .flow-card-step{padding-bottom:9px;margin-bottom:10px;border-bottom:1px solid #eef2f7;color:#155baf}
+    .zotero-flow-card .tool-tags span{background:#f3f7fd;border-color:#dfebf7}
+    .zotero-flow-card .icon-link{border-radius:8px;background:#f6f9fe}
+    @media(max-width:700px){.zotero-flow-intro{padding:25px 19px}.flow-brand-emblem{position:static;float:right;margin-bottom:8px}.zotero-flow-intro h3{clear:both}.zotero-matrix{padding:18px 13px}.zotero-matrix-heading{gap:12px}.zotero-flow-card{padding:17px}.zotero-matrix-table th:first-child{min-width:160px}}
+    @media(prefers-reduced-motion:reduce){.zotero-flow-card{transition:none}.zotero-flow-card:hover{transform:none}}
   </style>
 </head>
 <body>
@@ -1627,43 +1673,44 @@
           </a>
         </article>
 
+        <div class="project-group-title" role="heading" aria-level="3">
+          <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+          Zotero Flow Series · An integrated research workflow
+        </div>
+        <div class="zotero-flow-intro">
+          <div class="flow-brand-emblem" aria-hidden="true"><i class="fa-solid fa-atom"></i><span>FLOW</span></div>
+          <div class="flow-overline">ZOTERO FLOW SERIES  /  RESEARCH TOOLKIT</div>
+          <h3>One research journey. Seven focused tools.</h3>
+          <p>The Zotero Flow Series brings literature discovery, metadata quality, citation previews, visual knowledge organization, research planning, writing and publication management into a coherent, modular academic workflow. Use each plugin independently or combine them as your research progresses.</p>
+          <div class="flow-journey" aria-label="Suggested Zotero Flow Series usage order">
+            <span><b>01</b> Discover</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>02</b> Curate</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>03</b> Read</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>04</b> Connect</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>05</b> Plan</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>06</b> Write</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>07</b> Publish</span>
+          </div>
+        </div>
+
         <div class="zotero-matrix" id="zotero-flow-matrix" aria-labelledby="zotero-matrix-title">
           <div class="zotero-matrix-heading">
-            <div><span class="flow-overline">RESEARCH WORKFLOW · CAPABILITY MATRIX</span>
-              <h3 id="zotero-matrix-title">Zotero Flow Series · Plugin Matrix</h3>
-              <p>Compare each plugin by its primary research domain and see how the seven modules complement one another. A filled circle indicates a core focus; a ring indicates a supporting capability.</p>
+            <div><span class="flow-overline">02 / PRODUCT CAPABILITY MAP</span>
+              <h3 id="zotero-matrix-title">Explore the capability matrix</h3>
+              <p>A clear view of where each plugin adds value across the research lifecycle. Follow the diagonal for primary specialties; lighter marks show complementary use cases.</p>
             </div>
-            <a href="https://github.com/groele" target="_blank" rel="noopener noreferrer" class="zotero-matrix-explore">Explore repositories <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            <a href="https://github.com/groele" target="_blank" rel="noopener noreferrer" class="zotero-matrix-explore">GitHub portfolio <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
           <div class="zotero-matrix-scroll" role="region" tabindex="0" aria-label="Scrollable Zotero plugin capability matrix">
             <table class="zotero-matrix-table">
               <caption class="sr-only">Zotero plugin matrix: core and supporting use cases</caption>
               <thead><tr><th scope="col">Plugin / Stage</th><th scope="col">Discover</th><th scope="col">Metadata</th><th scope="col">Read</th><th scope="col">Knowledge</th><th scope="col">Plan</th><th scope="col">Cite</th><th scope="col">Publish</th></tr></thead>
               <tbody>
-                <tr><th scope="row"><a href="https://github.com/groele/Zotero-RefFlow">01 · RefFlow</a><small>Literature discovery</small></th><td><span class="matrix-core" aria-label="Core">●</span></td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td>—</td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td>—</td><td>—</td><td>—</td></tr>
-                <tr><th scope="row"><a href="https://github.com/groele/Zotero-MetaFlow">02 · MetaFlow</a><small>Library quality</small></th><td><span class="matrix-support" aria-label="Supporting">○</span></td><td><span class="matrix-core" aria-label="Core">●</span></td><td>—</td><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td>—</td></tr>
-                <tr><th scope="row"><a href="https://github.com/groele/Zotero-ViewFlow">03 · ViewFlow</a><small>Reference preview</small></th><td>—</td><td>—</td><td><span class="matrix-core" aria-label="Core">●</span></td><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td>—</td></tr>
-                <tr><th scope="row"><a href="https://github.com/groele/Mindflow-zotero">04 · MindFlow</a><small>Knowledge mapping</small></th><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td><span class="matrix-core" aria-label="Core">●</span></td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td>—</td><td>—</td></tr>
-                <tr><th scope="row"><a href="https://github.com/groele/Zotero-TaskFlow">05 · TaskFlow</a><small>Research execution</small></th><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td><span class="matrix-core" aria-label="Core">●</span></td><td>—</td><td><span class="matrix-support" aria-label="Supporting">○</span></td></tr>
-                <tr><th scope="row"><a href="https://github.com/groele/Zotero-CiteFlow">06 · CiteFlow</a><small>Word citation tracking</small></th><td>—</td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td>—</td><td>—</td><td>—</td><td><span class="matrix-core" aria-label="Core">●</span></td><td><span class="matrix-support" aria-label="Supporting">○</span></td></tr>
-                <tr><th scope="row"><a href="https://github.com/groele/ResearchFlow-Zotero">07 · ResearchFlow</a><small>Submission &amp; review</small></th><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td><span class="matrix-support" aria-label="Supporting">○</span></td><td><span class="matrix-core" aria-label="Core">●</span></td></tr>
+                <tr><th scope="row"><a href="https://github.com/groele/Zotero-RefFlow">01 · RefFlow</a><small>Literature discovery</small></th><td><span class="matrix-core" aria-label="Core capability" title="Core capability">●</span></td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td>—</td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td>—</td><td>—</td><td>—</td></tr>
+                <tr><th scope="row"><a href="https://github.com/groele/Zotero-MetaFlow">02 · MetaFlow</a><small>Library quality</small></th><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td><span class="matrix-core" aria-label="Core capability" title="Core capability">●</span></td><td>—</td><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td>—</td></tr>
+                <tr><th scope="row"><a href="https://github.com/groele/Zotero-ViewFlow">03 · ViewFlow</a><small>Reference preview</small></th><td>—</td><td>—</td><td><span class="matrix-core" aria-label="Core capability" title="Core capability">●</span></td><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td>—</td></tr>
+                <tr><th scope="row"><a href="https://github.com/groele/Mindflow-zotero">04 · MindFlow</a><small>Knowledge mapping</small></th><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td><span class="matrix-core" aria-label="Core capability" title="Core capability">●</span></td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td>—</td><td>—</td></tr>
+                <tr><th scope="row"><a href="https://github.com/groele/Zotero-TaskFlow">05 · TaskFlow</a><small>Research execution</small></th><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td><span class="matrix-core" aria-label="Core capability" title="Core capability">●</span></td><td>—</td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td></tr>
+                <tr><th scope="row"><a href="https://github.com/groele/Zotero-CiteFlow">06 · CiteFlow</a><small>Word citation tracking</small></th><td>—</td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td>—</td><td>—</td><td>—</td><td><span class="matrix-core" aria-label="Core capability" title="Core capability">●</span></td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td></tr>
+                <tr><th scope="row"><a href="https://github.com/groele/ResearchFlow-Zotero">07 · ResearchFlow</a><small>Submission &amp; review</small></th><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td><span class="matrix-support" aria-label="Supporting capability" title="Supporting capability">○</span></td><td><span class="matrix-core" aria-label="Core capability" title="Core capability">●</span></td></tr>
               </tbody>
             </table>
           </div>
           <div class="matrix-legend"><span><b class="matrix-core" aria-hidden="true">●</b> Core capability</span><span><b class="matrix-support" aria-hidden="true">○</b> Supporting capability</span><span>— Not a primary focus</span><span>Suggested workflow order: 01 → 07</span></div>
-        </div>
-
-        <div class="project-group-title" role="heading" aria-level="3">
-          <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
-          Zotero Flow Series · An integrated research workflow
-        </div>
-        <div class="zotero-flow-intro">
-          <div class="flow-overline">ONE ECOSYSTEM · SEVEN COMPLEMENTARY WORKFLOWS</div>
-          <h3>From the first reference to the final manuscript.</h3>
-          <p>The Zotero Flow Series brings literature discovery, metadata quality, citation previews, visual knowledge organization, research planning, writing and publication management into a coherent, modular academic workflow. Use each plugin independently or combine them as your research progresses.</p>
-          <div class="flow-journey" aria-label="Suggested Zotero Flow Series usage order">
-            <span><b>01</b> Discover</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>02</b> Curate</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>03</b> Read</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>04</b> Connect</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>05</b> Plan</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>06</b> Write</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span><b>07</b> Publish</span>
-          </div>
         </div>
 
         <article class="project zotero-flow-card">
